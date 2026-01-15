@@ -55,11 +55,20 @@ const FounderSection = () => {
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
+
                 <div className="flex items-center gap-4 mb-6">
                   <div className="h-px w-12 bg-primary" />
                   <span className="text-primary font-medium tracking-wider uppercase text-sm">
                     Founder & CEO
                   </span>
+                </div>
+                <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-border/50 shadow-2xl mb-8 group">
+                  <div className="absolute inset-0 bg-primary/20 mix-blend-overlay group-hover:bg-transparent transition-all duration-500" />
+                  <img 
+                    src="/image.png" 
+                    alt="Mr. Hitesh Madnani" 
+                    className="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-700"
+                  />
                 </div>
                 
                 <h3 className="text-4xl md:text-5xl font-semibold text-foreground mb-4">
@@ -146,7 +155,7 @@ const FounderSection = () => {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <AnimatedText
-              text="a visionary leader described as goal-oriented, honest, and transparent. building trust, one project at a time."
+              text="A visionary leader described as goal-oriented, honest, and transparent. building trust, one project at a time."
               className="text-2xl md:text-4xl lg:text-5xl font-light text-foreground leading-[1.4]"
               highlightWords={["visionary", "goal-oriented", "honest", "transparent", "trust"]}
               mode="word"

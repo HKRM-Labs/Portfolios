@@ -22,7 +22,7 @@ const ContactSection = () => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('https://formsubmit.co/ajax/info@madnanigroup.com', {
+      const response = await fetch('https://formsubmit.co/ajax/madnanigroup@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -60,14 +60,20 @@ const ContactSection = () => {
     {
       icon: MapPin,
       title: 'Address',
-      value: 'Madnani Fantasy Apartments, Chitrakoot Colony, Vaishali Nagar, Ajmer',
+      value: 'Madnani Fantasy Apartments, Chitrakoot Colony, Vaishali Nagar, Ajmer, 305001',
       link: '#',
     },
     {
       icon: Mail,
       title: 'Email',
-      value: 'info@madnanigroup.com',
-      link: 'mailto:info@madnanigroup.com',
+      value: 'madnanigroup@gmail.com',
+      link: 'mailto:madnanigroup@gmail.com',
+    },
+    {
+      icon: Mail,
+      title: 'Email',
+      value: 'Plotsinajmer@gmail.com',
+      link: 'mailto:Plotsinajmer@gmail.com',
     },
   ];
 
@@ -82,7 +88,7 @@ const ContactSection = () => {
           
           <div className="max-w-5xl">
             <AnimatedText
-              text="ready to find your dream property? let's build something extraordinary together."
+              text="Ready to find your dream property? Let's build something extraordinary together."
               className="text-3xl md:text-5xl lg:text-6xl font-light text-foreground leading-[1.3]"
               highlightWords={["dream", "property", "extraordinary", "together"]}
               mode="word"
@@ -119,7 +125,7 @@ const ContactSection = () => {
           >
             {contactInfo.map((item, index) => (
               <motion.a
-                key={item.title}
+                key={index}
                 href={item.link}
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}

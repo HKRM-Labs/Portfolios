@@ -59,9 +59,9 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-white leading-[1.1] tracking-tight"
-          >
+          ><span className="font-medium">
             Building Dreams,<br />
-            <span className="font-medium">Creating Legacy</span>
+            Creating Legacy</span>
           </motion.h1>
 
           {/* Accent Line */}

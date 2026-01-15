@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import property1 from '@/assets/property-1.jpeg';
 import property3 from '@/assets/property-3.jpeg';
 import property4 from '@/assets/property-4.jpeg';
+import property2 from '@/assets/property-2.jpeg';
 import AnimatedText from './AnimatedText';
 import SectionDivider from './SectionDivider';
 
@@ -29,6 +30,14 @@ const projects = [
     status: 'Completed',
     image: property4,
   },
+  {
+    title: 'Smart Meter Installation',
+    location: 'Ajmer, Pisangan, Pushkar & Beawar',
+    type: 'Infrastructure',
+    status: 'Completed',
+    description: 'We have successfully replaced 50000+ smart meters door to door',
+    image: property2,
+  },
 ];
 
 const ProjectsSection = () => {
@@ -46,7 +55,8 @@ const ProjectsSection = () => {
           
           <div className="max-w-5xl">
             <AnimatedText
-              text="more than 10 successful projects completed. setting new standards in luxury living across Ajmer."
+              text="More than 10 successful projects completed 
+Setting new standards in luxury living  and smart electric meters for electricity tracking in ajmer and nearby areas"
               className="text-3xl md:text-5xl lg:text-6xl font-light text-foreground leading-[1.3]"
               highlightWords={["10", "successful", "luxury", "Ajmer"]}
               mode="word"
@@ -116,10 +126,16 @@ const ProjectsSection = () => {
                       {project.title}
                     </h3>
                     
-                    <p className="text-muted-foreground mb-8 flex items-center gap-2">
+                    <p className={`text-muted-foreground flex items-center gap-2 ${project.description ? 'mb-4' : 'mb-8'}`}>
                       <span className="w-4 h-px bg-primary" />
                       {project.location}
                     </p>
+                    
+                    {project.description && (
+                      <p className="text-muted-foreground mb-8">
+                        {project.description}
+                      </p>
+                    )}
 
                     <motion.a
                       href="#contact"

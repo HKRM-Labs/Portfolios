@@ -47,12 +47,13 @@ const AboutSection = () => {
           </p>
           
           {/* Big Animated Statement */}
-          <div className="max-w-5xl">
+          <div className="max-w-9xl">
             <AnimatedText
-              text="the story of Madnani Group begins with trust. we believe in building dreams and creating lasting legacies for our community."
+              text="At MADNANI GROUP we believe real estate is more than buying or selling property—it's about building lasting relationships and helping people make confident decisions about their future. With a deep understanding of the local market and a commitment to integrity, we provide personalized real estate solutions tailored to each client's unique needs."
               className="text-3xl md:text-5xl lg:text-6xl font-light text-foreground leading-[1.3]"
-              highlightWords={["Madnani", "Group", "trust", "dreams", "legacies"]}
+              highlightWords={["MADNANI", "GROUP", "real estate", "lasting relationships", "integrity"]}
               mode="word"
+              speed="slow"
             />
           </div>
         </div>
@@ -77,15 +78,15 @@ const AboutSection = () => {
                 variants={itemVariants}
                 className="text-4xl md:text-5xl font-semibold leading-tight"
               >
-                Madnani <br />
-                <span className="text-gradient">Group Profile</span>
+                Madnani 
+                <span className="text-gradient"> Group Profile</span>
               </motion.h2>
 
               <div className="space-y-6">
                 <AnimatedText 
-                  text="a well-diversified group covering real estate, construction, IT and software services, field surveys, data mining, and electrical projects."
+                  text="A well diversified group covering real-estate, construction, IT and software services, field surveys, data mining, electrical projects and energy generation from renewable sources."
                   className="text-muted-foreground text-xl leading-relaxed font-light"
-                  highlightWords={["real estate", "construction", "IT"]}
+                  highlightWords={["real-estate", "construction", "IT"]}
                   mode="word"
                 />
               </div>
@@ -96,7 +97,7 @@ const AboutSection = () => {
               >
                 <p className="text-primary font-medium tracking-[0.2em] uppercase text-xs mb-4">Our Companies</p>
                 <div className="space-y-3">
-                  {['M/S Madnani Real Estate Pvt Ltd', 'M/S Madnani Technologies', 'M/S Madnani Ventures'].map((company, i) => (
+                  {['M/S Madnani Real Estate Pvt Ltd', 'M/S Madnani Technologies', 'M/S Madnani Ventures', 'M/S Madnani Energy Solutions'].map((company, i) => (
                     <motion.div
                       key={company}
                       initial={{ opacity: 0, x: -20 }}

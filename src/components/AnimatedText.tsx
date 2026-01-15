@@ -8,6 +8,7 @@ interface AnimatedTextProps {
   mode?: "word" | "character";
   highlightWords?: string[]; // Words to highlight in primary color
   as?: "p" | "h1" | "h2" | "h3" | "span";
+  speed?: "normal" | "slow" | "slower";
 }
 
 const AnimatedText = ({ 
@@ -15,12 +16,21 @@ const AnimatedText = ({
   className, 
   mode = "word",
   highlightWords = [],
-  as: Component = "p"
+  as: Component = "p",
+  speed = "normal"
 }: AnimatedTextProps) => {
   const container = useRef(null);
+  
+  // Speed presets: slower = more scroll distance needed = slower animation feel
+  const getOffset = (): ["start 0.95" | "start 0.98" | "start 1.0", "start 0.35" | "start 0.15" | "start 0.0"] => {
+    if (speed === "slower") return ["start 1.0", "start 0.0"];
+    if (speed === "slow") return ["start 0.98", "start 0.15"];
+    return ["start 0.95", "start 0.35"];
+  };
+  
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start 0.95", "start 0.35"],
+    offset: getOffset(),
   });
 
   const words = text.split(" ");

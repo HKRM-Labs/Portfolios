@@ -32,6 +32,15 @@ const companies = [
       { icon: Cpu, label: 'Products', desc: 'Sophisticated software tools for data mining and management.' },
       { icon: Database, label: 'Utility', desc: 'Proactive, efficient, and cost-effective data-driven project completion.' }
     ]
+  },
+  {
+    name: 'Madnani Energy Solutions',
+    tagline: 'Renewable Energy',
+    description: 'Pioneering sustainable energy solutions for a greener tomorrow.',
+    services: [
+      { icon: Zap, label: 'Solar Power', desc: 'Large-scale solar panel installations for residential and commercial projects, Solar power plants across entire state.' },
+      { icon: LineChart, label: 'Energy Consulting', desc: 'Expert guidance on renewable energy adoption and cost optimization.' }
+    ]
   }
 ];
 
@@ -86,18 +95,18 @@ const ServicesSection = () => {
               Our Group <span className="text-gradient">Companies</span>
             </h2>
             <p className="text-muted-foreground text-xl max-w-2xl mx-auto font-light">
-              Three distinct companies delivering excellence across real estate, technology, and government infrastructure.
+              Four distinct companies delivering excellence across real estate, technology, government infrastructure, and renewable energy.
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-4 gap-4">
             {companies.map((company, index) => (
               <motion.div
                 key={company.name}
                 initial={{ opacity: 0, y: 40 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                className="group relative bg-background/50 backdrop-blur-sm border border-border p-8 rounded-2xl hover:border-primary/50 transition-all duration-500 flex flex-col h-full"
+                className="group relative bg-background/50 backdrop-blur-sm border border-border p-5 rounded-2xl hover:border-primary/50 transition-all duration-500 flex flex-col h-full"
                 whileHover={{ y: -8 }}
               >
                 {/* Hover Glow Effect */}
@@ -105,26 +114,26 @@ const ServicesSection = () => {
                 
                 <div className="relative z-10 flex flex-col h-full">
                   {/* Tagline Badge */}
-                  <span className="inline-flex self-start px-3 py-1 bg-primary/10 text-primary text-xs font-medium tracking-wider uppercase rounded-full mb-4">
+                  <span className="inline-flex self-start px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-medium tracking-wider uppercase rounded-full mb-3">
                     {company.tagline}
                   </span>
                   
-                  <h3 className="text-2xl font-semibold text-foreground mb-3">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">
                     {company.name}
                   </h3>
-                  <p className="text-muted-foreground mb-8 text-sm leading-relaxed">
+                  <p className="text-muted-foreground mb-4 text-xs leading-relaxed">
                     {company.description}
                   </p>
 
-                  <div className="space-y-5 mt-auto">
+                  <div className="space-y-3 mt-auto">
                     {company.services.map((service) => (
-                      <div key={service.label} className="flex gap-4">
-                        <div className="shrink-0 mt-0.5 w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                          <service.icon className="w-4 h-4 text-primary" />
+                      <div key={service.label} className="flex gap-3">
+                        <div className="shrink-0 mt-0.5 w-6 h-6 bg-primary/10 rounded-lg flex items-center justify-center">
+                          <service.icon className="w-3.5 h-3.5 text-primary" />
                         </div>
                         <div>
-                          <h4 className="font-medium text-foreground text-sm">{service.label}</h4>
-                          <p className="text-xs text-muted-foreground leading-relaxed mt-1">
+                          <h4 className="font-medium text-foreground text-xs">{service.label}</h4>
+                          <p className="text-[10px] text-muted-foreground leading-relaxed mt-0.5">
                             {service.desc}
                           </p>
                         </div>
@@ -133,13 +142,13 @@ const ServicesSection = () => {
                   </div>
 
                   {/* Learn More Link */}
-                  <div className="mt-8 pt-6 border-t border-border/50">
+                  <div className="mt-4 pt-4 border-t border-border/50">
                     <a 
                       href="#contact" 
-                      className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors group/link"
+                      className="inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-primary transition-colors group/link"
                     >
                       Learn more
-                      <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                      <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-1" />
                     </a>
                   </div>
                 </div>
@@ -154,7 +163,7 @@ const ServicesSection = () => {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <AnimatedText
-              text="from electrical infrastructure to luxury apartments to cutting-edge software. we do it all, and we do it right."
+              text="From electrical infrastructure to luxury apartments to cutting edge software to solar power plants we do it all "
               className="text-2xl md:text-4xl lg:text-5xl font-light text-foreground leading-[1.4]"
               highlightWords={["electrical", "luxury apartments", "software"]}
               mode="word"
