@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%">
+  <defs>
+    <radialGradient id="favPlumBg" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#241B24" />
+      <stop offset="100%" stop-color="#120E12" />
+    </radialGradient>
+    <linearGradient id="favChampagne" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF9" />
+      <stop offset="50%" stop-color="#F4E5D4" />
+      <stop offset="100%" stop-color="#E8A2B6" />
+    </linearGradient>
+  </defs>
+
+  <rect width="64" height="64" rx="16" fill="url(#favPlumBg)" />
+  <rect width="62" height="62" x="1" y="1" rx="15" fill="none" stroke="#F4E5D4" stroke-width="0.8" stroke-opacity="0.5" />
+
+  <text x="18" y="44" font-family="serif" font-weight="900" font-size="34" fill="url(#favChampagne)">P</text>
+  <text x="34" y="46" font-family="serif" font-weight="900" font-size="34" fill="url(#favChampagne)" opacity="0.95">S</text>
+</svg>

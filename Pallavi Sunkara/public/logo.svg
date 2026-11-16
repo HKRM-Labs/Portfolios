@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgPlumLogo" cx="50%" cy="50%" r="65%" fx="30%" fy="30%">
+      <stop offset="0%" stop-color="#241B24" />
+      <stop offset="60%" stop-color="#181218" />
+      <stop offset="100%" stop-color="#120E12" />
+    </radialGradient>
+
+    <linearGradient id="champagneLinearLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF9" />
+      <stop offset="35%" stop-color="#F4E5D4" />
+      <stop offset="70%" stop-color="#E8A2B6" />
+      <stop offset="100%" stop-color="#D8B695" />
+    </linearGradient>
+
+    <linearGradient id="champagneBorderLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4E5D4" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#E8A2B6" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#F4E5D4" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="128" fill="url(#bgPlumLogo)" />
+  <rect width="504" height="504" x="4" y="4" rx="124" fill="none" stroke="url(#champagneBorderLogo)" stroke-width="2" />
+
+  <g transform="translate(256, 256)">
+    <circle r="190" fill="none" stroke="url(#champagneLinearLogo)" stroke-width="1.5" stroke-opacity="0.4" stroke-dasharray="4 8" />
+    <circle r="202" fill="none" stroke="url(#champagneLinearLogo)" stroke-width="0.75" stroke-opacity="0.25" />
+
+    {/* Letter P */}
+    <path d="M -85, -135 L -45, -135 L -45, -125 L -58, -125 L -58, 125 L -45, 125 L -45, 135 L -85, 135 L -85, 125 L -72, 125 L -72, -125 L -85, -125 Z" fill="url(#champagneLinearLogo)" />
+    <path d="M -58, -135 C 10, -135 65, -115 65, -45 C 65, 25 10, 45 -58, 45 L -58, 30 C -2, 30 45, 15 45, -45 C 45, -100 -2, -120 -58, -120 Z" fill="url(#champagneLinearLogo)" />
+
+    {/* Letter S with voluptuous curve */}
+    <path d="M 68, -90 C 62, -112 40, -130 5, -130 C -35, -130 -62, -105 -62, -75 C -62, -45 -35, -30 10, -10 C 55, 10 82, 35 82, 75 C 82, 115 50, 140 -5, 140 C -48, 140 -78, 115 -82, 85 L -62, 80 C -58, 105 -35, 124 -5, 124 C 35, 124 62, 102 62, 75 C 62, 45 35, 30 -10, 10 C -55, -10 -82, -35 -82, -75 C -82, -112 -52, -145 5, -145 C 48, -145 78, -120 84, -85 Z" fill="url(#champagneLinearLogo)" opacity="0.95" />
+
+    <polygon points="0,-165 6,-155 0,-145 -6,-155" fill="#E8A2B6" />
+    <polygon points="0,145 6,155 0,165 -6,155" fill="#E8A2B6" />
+  </g>
+</svg>

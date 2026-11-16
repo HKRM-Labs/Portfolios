@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="logoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="40%" stop-color="#FFF1F5" />
+      <stop offset="100%" stop-color="#FCE7F3" />
+    </linearGradient>
+    <linearGradient id="roseGradientLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DB2777" />
+      <stop offset="50%" stop-color="#E11D48" />
+      <stop offset="100%" stop-color="#BE185D" />
+    </linearGradient>
+    <linearGradient id="darkOnyxLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F0F14" />
+      <stop offset="100%" stop-color="#2D1224" />
+    </linearGradient>
+    <linearGradient id="borderRose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F472B6" />
+      <stop offset="50%" stop-color="#FB7185" />
+      <stop offset="100%" stop-color="#F472B6" />
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="128" fill="url(#logoBg)" />
+  <rect width="500" height="500" x="6" y="6" rx="124" fill="none" stroke="url(#borderRose)" stroke-width="10" stroke-opacity="0.85" />
+
+  <g transform="translate(256, 256)">
+    <circle r="195" fill="none" stroke="url(#borderRose)" stroke-width="2.5" stroke-opacity="0.35" stroke-dasharray="6 10" />
+    <circle r="208" fill="none" stroke="url(#borderRose)" stroke-width="1.2" stroke-opacity="0.25" />
+
+    {/* Monogram R */}
+    <text x="-150" y="85" font-family="'Bodoni Moda', 'Didot', 'Abril Fatface', Georgia, serif" font-weight="900" font-size="260" fill="url(#darkOnyxLogo)" letter-spacing="-6">R</text>
+
+    {/* Monogram S */}
+    <text x="0" y="95" font-family="'Bodoni Moda', 'Didot', 'Abril Fatface', Georgia, serif" font-weight="800" font-style="italic" font-size="260" fill="url(#roseGradientLogo)">S</text>
+
+    {/* Sparkle Star */}
+    <path d="M 130 -130 Q 130 -100 160 -100 Q 130 -100 130 -70 Q 130 -100 100 -100 Q 130 -100 130 -130 Z" fill="#E11D48" />
+  </g>
+</svg>
